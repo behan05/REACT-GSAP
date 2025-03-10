@@ -1,0 +1,28 @@
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #868383;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.leftBox {
+    order: 1;
+}
+
+.leftBox img {
+    max-width: 100%;
+    height: 100%;
+}
+.rightBox {
+    order: 0;
+    padding: 0 10px;
+}
+
+.rightBox p {
+    text-align: justify;
+    color: #000;
+    letter-spacing: 0.2rem;
+}

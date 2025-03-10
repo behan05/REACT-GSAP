@@ -1,0 +1,22 @@
+header {
+  background-color: #ccc;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+h3 {
+  color: lightseagreen;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #ccc;
+}
+
+.active-link {
+  color: red;
+}
