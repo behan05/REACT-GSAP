@@ -1,0 +1,13 @@
+.container {
+  height: 100vh;
+  background-color: lightseagreen;
+}
+
+h2 {
+  width: max-content;
+  font-size: 6rem;
+  white-space: nowrap;
+  background-color: maroon;
+  padding: 20px;
+  color: white;
+}

@@ -1,14 +1,29 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from "react";
+import LocomotiveScroll from "locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css";
+import "../styles/support.css";
 
-function Support() {
+const Support = () => {
+  const containerRef = useRef(null);
 
-    useEffect(() => {
-        document.title = "Support";
+  useEffect(() => {
+    const locoScroll = new LocomotiveScroll({
+      el: containerRef.current,
+      smooth: true,
     });
-    
-    return (
-        <div>Support</div>
-    )
-}
 
-export default Support
+    return () => {
+      locoScroll.destroy(); // Cleanup on unmount
+    };
+  }, []);
+
+  return (
+    <div ref={containerRef} className="smooth-scroll">
+      <section className="section">Section 1</section>
+      <section className="section">Section 2</section>
+      <section className="section">Section 3</section>
+    </div>
+  );
+};
+
+export default Support;

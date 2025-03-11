@@ -1,16 +1,39 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import "../styles/home.css";
+import gsap from "gsap";
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
 
-
   useEffect(() => {
     document.title = "Home";
+  });
+
+  const scrollTriggerConst = useRef(null);
+
+  useGSAP(() => {
+    gsap.from(scrollTriggerConst.current, {
+      x: -300,
+      duration: 1,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: scrollTriggerConst.current,
+        start: "top 80%",
+        end: "top 20%",
+        scrub: 1,
+        markers: true,
+        pin:true
+      }
+    })
   })
+
 
   return (
     <div className="container">
-      <div className="leftBox">
+      <div className="leftBox" ref={scrollTriggerConst}>
         <img src="../../public/assets/images/img.jpg" alt="image of code tab" title='Warnning Do not Click on it' draggable="false" />
       </div>
       <div className="rightBox">
