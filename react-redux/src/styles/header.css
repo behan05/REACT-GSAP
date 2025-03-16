@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightseagreen;
+  padding: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+}
+
+.active-list {
+  color: red;
+}
